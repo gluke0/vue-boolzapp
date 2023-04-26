@@ -124,3 +124,27 @@ ul{
     width: 100%;
 }
 
+#message{
+    height: 38.1rem;
+    overflow-y: scroll;
+}
+
+.message-bar{
+    height: 4rem;
+}
+
+#new-message{
+    width: 40rem;
+    height: 2.5rem;
+    font-size: x-small;
+    padding-left: 1rem;
+    border-radius: 0.3rem;
+    border: none;
+}
+
+.icons-bottom{
+    color: grey;
+    font-size: larger;
+    margin: auto;
+}
+
