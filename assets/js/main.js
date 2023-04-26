@@ -14,7 +14,7 @@ createApp({
     }
 }).mount('#app')
 
-ontacts: [
+contacts: [
     {
         name: 'Michele',
         avatar: './img/avatar_1.png',
