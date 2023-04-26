@@ -70,10 +70,10 @@
                         <li v-for="(contact, index) in contacts">
                             <div class="d-flex justify-content-between top-border">
                                 <div>
-                                    <img src="./assets/img/avatar_1.jpg" :alt="'profile photo'" class="rounded-circle big-img">
+                                    <img :src="contacts[index].avatar" :alt="`${contacts[index].name} profile photo`" class="rounded-circle big-img">
                                 </div>
                                 <div class="info">
-                                    <div> name</div>
+                                    <div> {{ contacts[index].name }}</div>
                                     <div class="small-text-grey">Ultimo messaggio inviato</div>
                                 </div>
                                 <div class="small-text-grey me-2 mt-1">12:00</div>
