@@ -17,6 +17,7 @@
 .small-img{
     width: 3rem;
     margin: 0.6rem;
+    aspect-ratio: 1;
 }
 
 ul{
@@ -57,10 +58,17 @@ ul{
 
 .notifications{
     background-color: rgb(158, 217, 248);
+    height: 4rem;
+    font-size: small;
 }
 
 .fa-bell-slash{
     color: rgb(158, 217, 248);
+    font-size: 1.3rem;
+}
+
+.activate{
+    color: grey;
 }
 
 #right{
