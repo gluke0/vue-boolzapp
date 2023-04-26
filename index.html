@@ -45,9 +45,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="d-flex flex-column">
                 <div class="d-flex align-item-center">
                     <div class="small-img rounded-circle d-flex align-item-center justify-content-center">
                         <i class="fa-solid fa-bell-slash"></i>
@@ -58,6 +56,34 @@
                     </div>
                 </div>
 
+                <div>
+                    <form action="#" class="d-flex">
+                        <label for="search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </label>
+                        <input type="search" name="search" id="search" placeholder="Cerca o inizia una nuova chat">
+                    </form>
+                </div>
+                
+                <div class="contacts">
+                    <ul>
+                        <li v-for="(contact, index) in contacts">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <img src="./assets/img/avatar_1.jpg" :alt="'profile photo'" class="rounded-circle big-img">
+                                </div>
+                                <div>
+                                    <div> name</div>
+                                    <div>Ultimo messaggio inviato</div>
+                                </div>
+                                <div>12:00</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        
             <!-- right -->
             <div>
 
