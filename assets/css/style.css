@@ -127,6 +127,30 @@ ul{
 #message{
     height: 38.1rem;
     overflow-y: scroll;
+    background-image: url(../img/mine.jpg);
+    padding: 3rem;
+}
+
+.bubble-sent{
+    background-color: rgb(220, 247, 192);
+    border-radius: 0.8rem;
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+}
+
+.bubble-received{
+    background-color: white;
+    border-radius: 0.8rem;
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+}
+
+.bubble-text{
+    padding: 0.8rem 4.5rem 0.8rem 0.8rem;
+}
+
+.bubble-time{
+    font-size: xx-small;
 }
 
 .message-bar{
