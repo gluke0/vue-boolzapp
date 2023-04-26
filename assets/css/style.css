@@ -44,6 +44,8 @@ ul{
     padding: 0;
 }
 
+/* left side */
+
 #left{
     width: 30%;
 }
@@ -96,6 +98,10 @@ ul{
     overflow-y: scroll;
 }
 
+#contacts ul li:first-child{
+    background-color: rgb(233, 235, 235);
+}
+
 .contacts-list{
     padding: 0;
     background-color: white;
@@ -114,6 +120,8 @@ ul{
 .top-border{
     border-top: 1px solid lightgray;
 }
+
+/* right side */
 
 #right{
     width: 70%;
