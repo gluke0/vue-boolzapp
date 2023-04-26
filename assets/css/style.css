@@ -6,10 +6,22 @@
 
 .pointer{
     cursor: pointer;
+    margin: 0.4rem;
+}
+
+.icons-top{
+    color: rgb(160, 154, 154);
+    font-size: larger;
 }
 
 .small-img{
     width: 3rem;
+    margin: 0.6rem;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
 }
 
 .big-img{
@@ -28,12 +40,38 @@
     border: 1px solid red;
     width: 80%;
     height: 95%;
+    padding: 0;
 }
 
 #left{
     width: 30%;
 }
 
+.gr-back{
+    background-color: rgb(234, 234, 234)
+}
+
+.ver-border{
+    border-right: 1px solid lightgray;
+}
+
+.notifications{
+    background-color: rgb(158, 217, 248);
+}
+
+.fa-bell-slash{
+    color: rgb(158, 217, 248);
+}
+
 #right{
     width: 70%;
+}
+
+.friend{
+    width: 100%;
+}
+
+.lasttime{
+    font-size: x-small;
+    color: grey;
 }
