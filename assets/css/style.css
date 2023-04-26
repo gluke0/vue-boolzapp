@@ -80,7 +80,7 @@ ul{
 
 .glass-search{
     background-color: white;
-    padding: .5rem 2rem .5rem 2rem;
+    padding: .5rem 1rem .5rem 2rem;
     margin: 0;
 }
 
@@ -89,6 +89,7 @@ ul{
     height: 2rem;
     border: none;
     font-size: x-small;
+    padding-left: 1rem;
 }
 
 #contacts{
