@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+.pointer{
+    cursor: pointer;
+}
+
+.small-img{
+    width: 3rem;
+}
 
 .back-view{
     height: 100vh;
@@ -17,4 +24,12 @@
     border: 1px solid red;
     width: 80%;
     height: 95%;
+}
+
+#left{
+    width: 30%;
+}
+
+#right{
+    width: 70%;
 }
