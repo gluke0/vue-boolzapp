@@ -3,9 +3,12 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            search: '',
             newMessage: '',
             selected: 0,
             answerTimer: 1,
+            contactsFiltered: [],
+            arrayStarter: [],
             contacts: [
                 {
                     name: 'Michele',
@@ -172,13 +175,11 @@ createApp({
             
         }
     },
-    mounted(){
-
-    },
     methods:{
         partner(index) {
             this.selected = index;
         },
+
         dateFormat(index){
             let df = luxon.DateTime.fromFormat(this.contacts[this.selected].messages[index].date, "dd/MM/yyyy HH:mm:ss").toLocaleString(luxon.DateTime.DATETIME_SHORT);
             return df;
@@ -187,6 +188,7 @@ createApp({
             let now = luxon.DateTime.now().toFormat("dd/MM/yyyy HH:mm:ss");
             return now;
         },
+
         sendMessage(index){
             if(this.newMessage !== ''){
                 let sentMessage = {
@@ -208,8 +210,7 @@ createApp({
                 status: 'received',
             }
             this.contacts[index].messages.push(reply);
-        }
-
+        },
     },
 
 }).mount('#app')

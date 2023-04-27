@@ -64,7 +64,7 @@
                         <label for="search">
                             <i class="fa-solid fa-magnifying-glass pointer glass-search"></i>
                         </label>
-                        <input type="search" name="search" id="search" placeholder="Cerca o inizia una nuova chat">
+                        <input v-model="search" @input="whereIsFriend" type="search" name="search" id="search" placeholder="Cerca o inizia una nuova chat">
                     </form>
                 </div>
                 
@@ -119,15 +119,13 @@
                     </div>
                 </div>
 
-                <div class="d-flex justify-conteßnt-between align-items-center gr-back message-bar">
+                <div class="d-flex justify-content-between align-items-center gr-back" id="message-bar">
                     <div class="pointer icons-bottom">
-                        <i class="fa-regular fa-face-smile"></i>
+                        <i class="fa-regular fa-face-smile ms-2"></i>
                     </div>
-                    <div>
-                        <input v-model="newMessage" @keyup.enter="sendMessage(selected)" type="text" name="new-message" id="new-message" placeholder="Scrivi un messaggio">
-                    </div>
+                        <input class="mx-3" v-model="newMessage" @keyup.enter="sendMessage(selected)" type="text" name="new-message" id="new-message" placeholder="Scrivi un messaggio">
                     <div class="pointer icons-bottom">
-                        <i class="fa-solid fa-microphone"></i>
+                        <i class="fa-solid fa-microphone me-2"></i>
                     </div>
                 </div>
             </div>

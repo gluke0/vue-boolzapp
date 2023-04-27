@@ -161,12 +161,13 @@ ul{
     font-size: xx-small;
 }
 
-.message-bar{
+#message-bar{
     height: 4rem;
+    width: 100%;
 }
 
 #new-message{
-    width: 40rem;
+    width: 100%;
     height: 2.5rem;
     font-size: x-small;
     padding-left: 1rem;
@@ -177,6 +178,6 @@ ul{
 .icons-bottom{
     color: grey;
     font-size: larger;
-    margin: auto;
+
 }
 
