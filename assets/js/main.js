@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            newMessage: '',
             selected: 0,
             contacts: [
                 {
@@ -180,7 +181,18 @@ createApp({
         dateFormat(index){
             let df = luxon.DateTime.fromFormat(this.contacts[this.selected].messages[index].date, "dd/MM/yyyy HH:mm:ss").toLocaleString(luxon.DateTime.DATE + " " + luxon.DateTime.TIME_24_SIMPLE);
             return df;
+        },
+        sendMessage(index){
+            if(this.newMessage !== ''){
+                let sentMessage = {
+                    date: "",
+                    message: this.newMessage,
+                    status: 'sent',
+                }
+                this.contacts[index].messages.push(sentMessage);
+            }
         }
+
     },
 
 }).mount('#app')
