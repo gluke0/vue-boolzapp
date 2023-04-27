@@ -110,17 +110,9 @@
                 </div>
 
                 <div class="d-flex flex-column" id="message">
-                    <div class="d-flex justify-content-between align-self-end bubble-sent">
-                        <div class="bubble-text">Hai portato a spasso il cane?</div>
+                    <div v-for="(contact_message, index) in contacts[selected].messages" class="d-flex justify-content-between" :class="(contact_message.status == 'sent') ? 'bubble-sent align-self-end' : 'bubble-received align-self-start'">
+                        <div class="bubble-text">{{ contact_message.message }}</div>
                         <div class="align-self-end bubble-time mb-1 me-1">15:30</div>
-                    </div>
-                    <div class="d-flex justify-content-between align-self-end bubble-sent">
-                        <div class="bubble-text">Ricordati di stendere i panni</div>
-                        <div class="align-self-end bubble-time mb-1 me-1">15:50</div>
-                    </div>
-                    <div class="d-flex justify-content-between align-self-start bubble-received">
-                        <div class="bubble-text">Tutto fatto!</div>
-                        <div class="align-self-end bubble-time mb-1 me-1">16:15</div>
                     </div>
                 </div>
 
