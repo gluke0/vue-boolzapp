@@ -5,6 +5,7 @@ createApp({
         return {
             newMessage: '',
             selected: 0,
+            answerTimer: 1,
             contacts: [
                 {
                     name: 'Michele',
@@ -190,7 +191,19 @@ createApp({
                     status: 'sent',
                 }
                 this.contacts[index].messages.push(sentMessage);
+                setTimeout(() => {
+                    this.answer(index);
+                }, this.answerTimer * 1000)
             }
+            this.newMessage = '';
+        },
+        answer(index){
+            let reply = {
+                date: "",
+                message: 'Ok!',
+                status: 'received',
+            }
+            this.contacts[index].messages.push(reply);
         }
 
     },
