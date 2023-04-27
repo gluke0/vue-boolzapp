@@ -180,13 +180,17 @@ createApp({
             this.selected = index;
         },
         dateFormat(index){
-            let df = luxon.DateTime.fromFormat(this.contacts[this.selected].messages[index].date, "dd/MM/yyyy HH:mm:ss").toLocaleString(luxon.DateTime.DATE + " " + luxon.DateTime.TIME_24_SIMPLE);
+            let df = luxon.DateTime.fromFormat(this.contacts[this.selected].messages[index].date, "dd/MM/yyyy HH:mm:ss").toLocaleString(luxon.DateTime.DATETIME_SHORT);
             return df;
+        },
+        realTimeDate() {
+            let now = luxon.DateTime.now().toFormat("dd/MM/yyyy HH:mm:ss");
+            return now;
         },
         sendMessage(index){
             if(this.newMessage !== ''){
                 let sentMessage = {
-                    date: "",
+                    date: this.realTimeDate(),
                     message: this.newMessage,
                     status: 'sent',
                 }
@@ -199,7 +203,7 @@ createApp({
         },
         answer(index){
             let reply = {
-                date: "",
+                date: this.realTimeDate(),
                 message: 'Ok!',
                 status: 'received',
             }
