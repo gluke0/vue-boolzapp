@@ -177,6 +177,11 @@ createApp({
         partner(index) {
             this.selected = index;
         },
-    }
+        dateFormat(index){
+            let df = luxon.DateTime.fromFormat(this.contacts[this.selected].messages[index].date, "dd/MM/yyyy HH:mm:ss").toLocaleString(luxon.DateTime.DATE + " " + luxon.DateTime.TIME_24_SIMPLE);
+            return df;
+        }
+    },
+
 }).mount('#app')
 
