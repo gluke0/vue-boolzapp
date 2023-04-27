@@ -67,7 +67,7 @@
                 
                 <div id="contacts">
                     <ul class="contacts-list">
-                        <li v-for="(contact, index) in contacts">
+                        <li v-for="(contact, index) in contacts" @click="partner(index)" :class="{ active: index == selected}">
                             <div class="d-flex justify-content-between top-border">
                                 <div>
                                     <img :src="contacts[index].avatar" :alt="`${contacts[index].name} profile photo`" class="rounded-circle big-img">
@@ -89,10 +89,10 @@
                 <div class="d-flex justify-content-between gr-back">
                     <div class="d-flex align-items-center">
                         <div>
-                            <img src="./assets/img/avatar_1.jpg" alt="Michele profile photo" class="small-img rounded-circle">
+                            <img :src="contacts[selected].avatar" :alt="`${contacts[selected].name} profile photo`" class="small-img rounded-circle">
                         </div>
                         <div class="info d-flex align-items-center flex-wrap">
-                            <div class="friend">Michele</div>
+                            <div class="friend">{{ contacts[selected].name }}</div>
                             <div class="small-text-grey"> Ultimo accesso oggi alle 12:00 </div>
                         </div>
                     </div>
