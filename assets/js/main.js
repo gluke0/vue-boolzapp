@@ -175,13 +175,24 @@ createApp({
             
         }
     },
+
+    beforeMount(){
+        // creo contattifiltrati copiando i contatti
+        this.contactsFiltered = this.contacts; 
+        // creo ulteriore array
+        for (let i = 0; i < this.contacts.length; i++){
+            const originalIndex = i;
+            this.arrayStarter.push(originalIndex);
+        }
+    },
+
     methods:{
         partner(index) {
             this.selected = index;
         },
 
         dateFormat(index){
-            let df = luxon.DateTime.fromFormat(this.contacts[this.selected].messages[index].date, "dd/MM/yyyy HH:mm:ss").toLocaleString(luxon.DateTime.DATETIME_SHORT);
+            let df = luxon.DateTime.fromFormat(this.contacts[this.selected].messages[index].date, "dd/MM/yyyy HH:mm:ss").toLocaleString(luxon.DateTime.DATETIME_SHORT_WITH_SECONDS);
             return df;
         },
         realTimeDate() {
@@ -211,7 +222,17 @@ createApp({
             }
             this.contacts[index].messages.push(reply);
         },
-    },
 
+        whichFriend(){
+            this.arrayStarter = [];
+            this.contactsFiltered = this.contacts.filter((contact, index) => {
+                if(contact.name.toLowerCase().includes(this.search.toLowerCase())){
+                    this.originalIndex = index;
+                    this.arrayStarter.push(this.originalIndex);
+                    return true;
+                }
+            })
+        },
+    },
 }).mount('#app')
 
